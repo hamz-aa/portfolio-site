@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: #1a1b1f;
+    color: #ffffff;
+}
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines{
+    display: none;
+}
+
+.container{
+    max-width: 1200px;
+    width: 95%;
+    margin: auto;
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.menu-items li{
+    list-style: none;
+    margin-left: 2.5rem;
+    font-size: 1.8rem;
+}
+
+.navbar .navbar-container{
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
+
+.navbar-container .nav-start{
+    display: flex;
+}
+
+.nav-start .name{
+    margin-left: 2.5rem;
+    font-weight: 50;
+}
+
+.navbar-container .nav-end{
+    display: flex;
+}
+
+.navbar-container .nav-end .menu-items{
+    display: flex;
+}
+
+.menu-items li a{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+}
+
