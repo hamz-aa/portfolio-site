@@ -14,6 +14,8 @@ body{
     color: #ffffff;
 }
 
+/* ##################  navbar  ####################### */
+
 .navbar input[type="checkbox"],
 .navbar .hamburger-lines{
     display: none;
@@ -107,4 +109,85 @@ body{
     transition: color 0.5s ease-in, background 0.5s ease-in;
     color: rgba(0, 0, 0, 0.897);
     background:  #ffffffea;
+}
+
+/* ##################  intro section ################### */
+
+.intro{
+    padding: 50px 0px;
+}
+
+.intro-wrapper{
+    height: 500px;
+    width: 100%;
+    /* border: 2px solid red; */
+    margin-top: 120px;
+    display: flex;
+}
+
+.image-sec{
+    height: 100%;
+    /* width: 35%; */
+    flex-grow: 2;
+    display: flex;
+    transform: translateX(-150%);
+    animation: img-ani 1.5s ease-in-out forwards;
+}
+
+@keyframes img-ani {
+    100%{
+        transform: translate(0);
+    }
+}
+
+.image-sec img{
+    display: block;
+}
+
+.text-sec{
+    height: 100%;
+    /* width: 55%; */
+    flex-grow: 4;
+    padding: 8em 4em;
+    transform: translateX(150%);
+    animation: text-ani 1.5s ease-in-out forwards;
+}
+
+@keyframes text-ani {
+    100%{
+        transform: translate(0);
+    }
+}
+
+.text-sec h1{
+    font-size: 8rem;
+    font-weight: 300;
+}
+
+.text-sec p{
+    font-size: 1.8rem;
+}
+
+.social-links-sec{
+    height: 100%;
+    /* width: 10%; */
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* margin-bottom: 500px; */
+    padding-bottom: 50px;
+    /* padding-top: 1em; */
+    transform: translateY(150%);
+    animation: link-ani 1.5s ease-in-out forwards;
+}
+
+.github{
+    padding-top: 0.3em;
+}
+
+@keyframes link-ani {
+    100%{
+        transform: translate(0);
+    }
 }
