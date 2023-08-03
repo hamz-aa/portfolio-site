@@ -259,3 +259,110 @@ body{
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
+/* ################### about section ####################### */
+
+.about-wrapper{
+    /* border: 2px solid red; */
+    height: 500px;
+    width: 100%;
+    display: flex;
+}
+
+.about-text{
+    flex: 1 1 50%;
+}
+
+.about-text h1{
+    font-size: 5rem;
+    text-align: left;
+    padding: 0em 1.6em;
+    padding-top: 1em;
+}
+
+.about-text p{
+    font-size: 1.8rem;
+    padding: 1em 1.6em;
+}
+
+.about-image{
+    flex: 1 1 50%;
+}
+
+.about-image img{
+    width: 100%;
+}
+
+/* #######################  work section  ######################### */
+
+#work h1{
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 40px;
+}
+
+.work-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.work-wrapper img{
+    display: block;
+    width: 100%;
+    margin: auto;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.img-container{
+    margin: 0 1rem;
+    position: relative;
+}
+
+.img-content{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 2;
+    text-align: center;
+    transition: all 0.3s ease-in-out 0.1s;
+}
+
+.img-content h1{
+    color: white;
+    font-size: 3rem;
+}
+
+.img-content a{
+    font-size: 1.2rem;
+}
+
+.img-container::after{
+    border: 2px solid red;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.871);
+    opacity: 0;
+    z-index: 1;
+    transform: scaleY(0);
+    transform-origin: 100% 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.img-container:hover::after{
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.img-container:hover .img-content{
+    opacity: 1;
+    top: 40%;
+}
