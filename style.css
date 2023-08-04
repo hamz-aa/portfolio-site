@@ -28,6 +28,8 @@ body {
 .navbar {
   position: fixed;
   width: 100%;
+  background-color: white;
+  opacity: 0.85;
   z-index: 10;
   box-shadow: 0px 5px 10px 0px #cec5c5;
 }
@@ -43,8 +45,8 @@ body {
   justify-content: space-between;
   height: 80px;
   align-items: center;
-  transform: translateY(-150%);
-  animation: nav-animation 1s ease-out forwards;
+  /* transform: translateY(-150%);
+  animation: nav-animation 1s ease-out forwards; */
 }
 
 @keyframes nav-animation {
@@ -301,7 +303,7 @@ body {
 
 /* #######################  work section  ######################### */
 
-#work h1 {
+#work > h1 {
   text-align: center;
   font-size: 5rem;
   margin-bottom: 40px;
@@ -340,10 +342,14 @@ body {
 .img-content h1 {
   color: white;
   font-size: 3rem;
+  margin-bottom: 10px;
 }
 
 .img-content a {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  outline: none;
+  text-decoration: none;
 }
 
 .img-container::after {
@@ -371,4 +377,62 @@ body {
 .img-container:hover .img-content {
   opacity: 1;
   top: 40%;
+}
+
+.img-content .btn{
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  padding: 0.2em;
+}
+
+.img-content .btn:hover{
+  transition: color 0.5s ease-in, background 0.5s ease-in;
+  color:  rgba(0, 0, 0, 0.808);
+  background:rgba(255, 255, 255, 0.87);
+}
+
+/* ######################  contact section  ######################## */
+
+#contact{
+  padding: 5rem 0;
+}
+
+.contact-wrapper{
+  padding: 1rem;
+  width: 100%;
+  margin: auto;
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: center; */
+  margin-left: 40%;
+}
+
+.contact-wrapper input{
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 1rem 0;
+  box-shadow: none;
+  outline: none;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.contact-wrapper textarea{
+  display: block;
+  outline: none;
+  width: 100%;
+  border: none;
+  padding: 1rem 0;
+}
+
+.contact-wrapper h2{
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.contact-wrapper a{
+  font-size: 1.rem;
 }
