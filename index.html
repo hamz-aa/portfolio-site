@@ -74,7 +74,15 @@
         <div class="left">
           <h1>Things I've Learned So Far</h1>
           <p>
-            I've learned various programming concepts from object oriented programming to data structures including relational databases like SQL server as well. I'm also well versed in various programming algorithms and their core concepts of time and space complexity and shortest path calculation etc. Currently I'm giving my full attention to web and app development technologies. I'm studying MERN stack development and in the near future will create various web apps. All of whom shall be displayed on this portfolio site as a testament of my skills and abilities.   
+            I've learned various programming concepts from object oriented
+            programming to data structures including relational databases like
+            SQL server as well. I'm also well versed in various programming
+            algorithms and their core concepts of time and space complexity and
+            shortest path calculation etc. Currently I'm giving my full
+            attention to web and app development technologies. I'm studying MERN
+            stack development and in the near future will create various web
+            apps. All of whom shall be displayed on this portfolio site as a
+            testament of my skills and abilities.
           </p>
         </div>
         <div class="right">
@@ -102,11 +110,21 @@
         <div class="about-text">
           <h1>More About Me</h1>
           <p>
-            I'm a computer science student from Pakistan. Currently I'm learning to become a MERN stack developer and explore various web and app development technologies. I've got firm grip in programming as it is also one of my favourite subject. The first programming language I learned was C++. Being one of the oldest and hardest language to study, it exponentially improved my programming concepts. I shall apply the knowledge of programming to my best understanding and create various apps and sites using these technologies.
+            I'm a computer science student from Pakistan. Currently I'm learning
+            to become a MERN stack developer and explore various web and app
+            development technologies. I've got firm grip in programming as it is
+            also one of my favourite subject. The first programming language I
+            learned was C++. Being one of the oldest and hardest language to
+            study, it exponentially improved my programming concepts. I shall
+            apply the knowledge of programming to my best understanding and
+            create various apps and sites using these technologies.
           </p>
         </div>
         <div class="about-image">
-          <img src="https://miro.medium.com/v2/format:webp/0*hU4zJiyVwWcM0L-w.png" alt="" />
+          <img
+            src="https://miro.medium.com/v2/format:webp/0*hU4zJiyVwWcM0L-w.png"
+            alt=""
+          />
         </div>
       </div>
     </section>
@@ -148,13 +166,54 @@
       <div class="contact-wrapper container">
         <h2>Get In Touch</h2>
         <label for="name">Name</label>
-        <input type="text" class="name" placeholder="Hamza Ahmed">
+        <input type="text" id="name" placeholder="Hamza Ahmed" />
         <label for="email">E-mail</label>
-        <input type="email" class="email" placeholder="someone@example.com">
+        <input type="email" id="email" placeholder="someone@example.com" />
         <label for="text">Message</label>
-        <textarea name="" id="" class="text" cols="30" rows="10" placeholder="Type your message here"></textarea>
+        <textarea
+          name=""
+          id="text"
+          class=""
+          cols="30"
+          rows="10"
+          placeholder="Type your message here"
+        ></textarea>
         <a href="" class="btn">Submit</a>
       </div>
     </section>
+
+    <footer id="footer">
+      <h2>Hamza Ahmed &copy; all rights reserved.</h2>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Add smooth scrolling to all links
+        $("a").on("click", function (event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              800,
+              function () {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              }
+            );
+          } // End if
+        });
+      });
+    </script>
   </body>
 </html>

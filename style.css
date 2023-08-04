@@ -173,12 +173,13 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-bottom: 50px;
+  padding-bottom: 90px;
   transform: translateY(150%);
   animation: link-animation 1s ease-in-out forwards;
   position: fixed;
   right: 20px;
   top: 0;
+  z-index: 3;
 }
 
 @keyframes link-animation {
@@ -396,43 +397,86 @@ body {
 
 #contact{
   padding: 5rem 0;
+  overflow: hidden;
 }
 
 .contact-wrapper{
-  padding: 1rem;
-  width: 100%;
-  margin: auto;
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: center; */
-  margin-left: 40%;
+  /* border: 2px solid red; */
+  padding: 5rem;
+  border-radius: 20px;
+  width: 50%;
+  background-color: black;
+  color: white;
+  height: 550px;
+  margin: 0 auto;
+  font-size: 1.8rem;
 }
 
 .contact-wrapper input{
   display: block;
   width: 100%;
   border: none;
+  border-radius: 10px;
+  /* border-bottom: 1px solid; */
   padding: 1rem 0;
   box-shadow: none;
   outline: none;
   margin-bottom: 1rem;
+  margin-top: 1rem;
   font-weight: 500;
 }
 
 .contact-wrapper textarea{
+  border-radius: 10px;
   display: block;
   outline: none;
   width: 100%;
-  border: none;
+  /* border: none; */
   padding: 1rem 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .contact-wrapper h2{
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 400;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .contact-wrapper a{
   font-size: 1.rem;
+  text-decoration: none;
+  font-weight: 400;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  width: 13%;
+}
+
+.contact-wrapper .btn{
+  background-color: white;
+  margin-top: 22px;
+  color: black;
+  border-radius: 10px;
+  padding: 0.2em;
+  /* display: flex;
+  justify-content: center; */
+}
+
+.contact-wrapper .btn:hover{
+  transition: color 0.5s ease-in, background 0.5s ease-in;
+  color:  rgba(0, 0, 0, 0.808);
+  background:rgba(255, 255, 255, 0.87); 
+}
+
+/* ##################  footer styling  ################## */
+
+#footer h2{
+  text-align: center;
+  font-size: 2rem;
+  padding: 3rem;
+  font-weight: 500;
+  color: white;
+  background-color: black;
 }
