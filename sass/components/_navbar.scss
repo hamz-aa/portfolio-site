@@ -1,12 +1,17 @@
 header {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
     rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background-color: white;
 
   .header-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1em 0;
+    position: relative;
 
     .logo-wrapper {
       display: flex;
@@ -31,7 +36,7 @@ header {
           a {
             color: $secondary;
             border-bottom: 2px solid transparent;
-            transition: border-bottom 0.4s ease;
+            transition: all 0.3s ease-in-out;
 
             &:hover {
               border-bottom: 2px solid $secondary;
@@ -50,12 +55,115 @@ header {
                 background-color: white;
                 color: $secondary;
                 border: 2px solid $secondary;
-                transition: background-color 0.5s ease;
+                transition: all 0.5s ease-in-out;
               }
             }
           }
         }
       }
+
+      @include lg {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        transition: transform 0.5s ease-in-out;
+
+        ul {
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+
+          li#cv {
+            margin-top: 6px;
+          }
+        }
+      }
+    }
+
+    input[type="checkbox"] {
+      cursor: pointer;
+      display: none;
+      opacity: 0;
+      width: 40px;
+      height: 32px;
+      z-index: 2;
+      position: absolute;
+      right: 5%;
+
+      @include lg {
+        display: block;
+      }
+    }
+
+    .hamburger-menu {
+      display: none;
+      position: absolute;
+      right: 5%;
+      width: 40px;
+      height: 32px;
+
+      span {
+        background-color: black;
+        position: absolute;
+        left: 0;
+        display: inline-block;
+        width: 100%;
+        height: 3px;
+        z-index: 1;
+        border-radius: 20px;
+
+        &:first-of-type {
+          transform-origin: 0% 0%;
+          transition: all 0.3s ease-in-out;
+          top: 0;
+        }
+
+        &:nth-of-type(2) {
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        &:last-of-type {
+          transform-origin: 0% 100%;
+          transition: all 0.3s ease-in-out;
+          bottom: 0;
+        }
+      }
+
+      @include lg {
+        display: block;
+      }
+    }
+
+    @include lg {
+      input[type="checkbox"]:checked ~ .hamburger-menu span:first-of-type {
+        transform: rotate(45deg);
+        width: 43px;
+      }
+
+      input[type="checkbox"]:checked ~ .hamburger-menu span:nth-of-type(2) {
+        display: none;
+      }
+
+      input[type="checkbox"]:checked ~ .hamburger-menu span:last-of-type {
+        transform: rotate(-45deg);
+        width: 43px;
+      }
+
+      input[type="checkbox"]:checked ~ nav {
+        transform: translate(-50%, 90%);
+        background-color: white;
+        // padding: 2em;
+      }
+
+      // input[type="checkbox"]:checked ~ nav::after {
+      //   content: "";
+      //   position: absolute;
+      //   inset: 0;
+      //   width: 100vw;
+      //   height: 100vh;
+      //   background-color: black;
+      // }
     }
   }
 }
