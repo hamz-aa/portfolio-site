@@ -1,5 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+}
+
+header {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+header .header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 0;
+}
+header .header-wrapper .logo-wrapper {
+  display: flex;
+  align-items: center;
+  color: #1f2544;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+header .header-wrapper .logo-wrapper img {
+  width: 60px;
+  height: 60px;
+}
+header .header-wrapper nav ul {
+  display: flex;
+}
+header .header-wrapper nav ul li {
+  margin-inline: 1em;
+}
+header .header-wrapper nav ul li a {
+  color: #474f7a;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.4s ease;
+}
+header .header-wrapper nav ul li a:hover {
+  border-bottom: 2px solid #474f7a;
+}
+header .header-wrapper nav ul li:last-child a {
+  background-color: #474f7a;
+  border: 2px solid transparent;
+  color: white;
+  padding: 0.5em;
+  border-radius: 20px;
+}
+header .header-wrapper nav ul li:last-child a:hover {
+  background-color: white;
+  color: #474f7a;
+  border: 2px solid #474f7a;
+  transition: background-color 0.5s ease;
 }

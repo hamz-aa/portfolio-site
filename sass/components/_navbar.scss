@@ -1,0 +1,61 @@
+header {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.05) 0px 5px 10px;
+
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0;
+
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      color: $primary;
+      font-size: 1.3rem;
+      font-weight: 500;
+
+      img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    nav {
+      ul {
+        display: flex;
+
+        li {
+          margin-inline: 1em;
+
+          a {
+            color: $secondary;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.4s ease;
+
+            &:hover {
+              border-bottom: 2px solid $secondary;
+            }
+          }
+
+          &:last-child {
+            a {
+              background-color: $secondary;
+              border: 2px solid transparent;
+              color: white;
+              padding: 0.5em;
+              border-radius: 20px;
+
+              &:hover {
+                background-color: white;
+                color: $secondary;
+                border: 2px solid $secondary;
+                transition: background-color 0.5s ease;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
