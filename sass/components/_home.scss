@@ -173,3 +173,9 @@
     }
   }
 }
+
+@include sm {
+  #home {
+    padding-top: 1.5em;
+  }
+}
