@@ -324,6 +324,11 @@ header .header-wrapper .hamburger-menu span:last-of-type {
   font-size: 3.2rem;
   cursor: default;
 }
+@media (max-width: 480px) {
+  #about .about-headings h3 {
+    font-size: 3rem;
+  }
+}
 #about .about-wrapper {
   display: flex;
   align-items: center;
@@ -337,6 +342,11 @@ header .header-wrapper .hamburger-menu span:last-of-type {
 }
 #about .about-wrapper .img-content img {
   width: 65%;
+}
+@media (max-width: 720px) {
+  #about .about-wrapper .img-content {
+    display: none;
+  }
 }
 #about .about-wrapper .about-content {
   flex: 1 1 50%;
@@ -367,6 +377,7 @@ header .header-wrapper .hamburger-menu span:last-of-type {
 }
 #about .about-wrapper .about-content .about-boxes div p {
   color: #474f7a;
+  white-space: nowrap;
 }
 #about .about-wrapper .about-content .about-boxes .experience {
   padding: 2em 2.5em;
@@ -374,6 +385,81 @@ header .header-wrapper .hamburger-menu span:last-of-type {
 #about .about-wrapper .about-content .about-boxes .education {
   padding: 2em;
 }
+@media (max-width: 1010px) {
+  #about .about-wrapper .about-content .about-boxes .experience {
+    padding: 1.5em;
+  }
+  #about .about-wrapper .about-content .about-boxes .education {
+    padding: 1.5em;
+  }
+}
+@media (max-width: 860px) {
+  #about .about-wrapper .about-content .about-boxes .experience {
+    padding: 1em;
+  }
+  #about .about-wrapper .about-content .about-boxes .education {
+    padding: 1em;
+  }
+}
+@media (max-width: 800px) {
+  #about .about-wrapper .about-content .about-boxes div i {
+    font-size: 1.6rem;
+  }
+  #about .about-wrapper .about-content .about-boxes div h4 {
+    font-size: 1.2rem;
+  }
+  #about .about-wrapper .about-content .about-boxes div p {
+    font-size: 0.9rem;
+  }
+  #about .about-wrapper .about-content .about-boxes .experience {
+    padding: 0.6em;
+  }
+  #about .about-wrapper .about-content .about-boxes .education {
+    padding: 0.6em;
+  }
+}
+@media (max-width: 720px) {
+  #about .about-wrapper .about-content .about-boxes div i {
+    font-size: 1.8rem;
+  }
+  #about .about-wrapper .about-content .about-boxes div h4 {
+    font-size: 1.6rem;
+  }
+  #about .about-wrapper .about-content .about-boxes div p {
+    font-size: 1rem;
+  }
+  #about .about-wrapper .about-content .about-boxes .experience {
+    padding: 1.4em;
+  }
+  #about .about-wrapper .about-content .about-boxes .education {
+    padding: 1.4em;
+  }
+}
+@media (max-width: 520px) {
+  #about .about-wrapper .about-content .about-boxes div h4 {
+    font-size: 1.4rem;
+  }
+  #about .about-wrapper .about-content .about-boxes div p {
+    font-size: 0.9rem;
+  }
+  #about .about-wrapper .about-content .about-boxes .experience {
+    padding: 1em;
+  }
+  #about .about-wrapper .about-content .about-boxes .education {
+    padding: 1em;
+  }
+}
 #about .about-wrapper .about-content .about-text p {
   text-align: justify;
+}
+@media (max-width: 720px) {
+  #about .about-wrapper .about-content {
+    padding: 0 10em;
+  }
+}
+
+@media (max-width: 720px) {
+  #about {
+    padding-top: 4em;
+  }
 }

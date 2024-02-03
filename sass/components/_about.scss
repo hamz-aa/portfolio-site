@@ -13,6 +13,12 @@
       font-size: 3.2rem;
       cursor: default;
     }
+
+    @include sm {
+      h3 {
+        font-size: 3rem;
+      }
+    }
   }
 
   .about-wrapper {
@@ -28,6 +34,12 @@
 
       img {
         width: 65%;
+      }
+    }
+
+    @include md {
+      .img-content {
+        display: none;
       }
     }
 
@@ -62,6 +74,7 @@
 
           p {
             color: $secondary;
+            white-space: nowrap;
           }
         }
 
@@ -72,6 +85,94 @@
         .education {
           padding: 2em;
         }
+
+        @include breakpoint(1010px) {
+          .experience {
+            padding: 1.5em;
+          }
+
+          .education {
+            padding: 1.5em;
+          }
+        }
+
+        @include breakpoint(860px) {
+          .experience {
+            padding: 1em;
+          }
+
+          .education {
+            padding: 1em;
+          }
+        }
+
+        @include breakpoint(800px) {
+          div {
+            i {
+              font-size: 1.6rem;
+            }
+
+            h4 {
+              font-size: 1.2rem;
+            }
+
+            p {
+              font-size: 0.9rem;
+            }
+          }
+
+          .experience {
+            padding: 0.6em;
+          }
+
+          .education {
+            padding: 0.6em;
+          }
+        }
+
+        @include md {
+          div {
+            i {
+              font-size: 1.8rem;
+            }
+
+            h4 {
+              font-size: 1.6rem;
+            }
+
+            p {
+              font-size: 1rem;
+            }
+          }
+
+          .experience {
+            padding: 1.4em;
+          }
+
+          .education {
+            padding: 1.4em;
+          }
+        }
+
+        @include breakpoint(520px) {
+          div {
+            h4 {
+              font-size: 1.4rem;
+            }
+
+            p {
+              font-size: 0.9rem;
+            }
+          }
+
+          .experience {
+            padding: 1em;
+          }
+
+          .education {
+            padding: 1em;
+          }
+        }
       }
 
       .about-text {
@@ -80,5 +181,17 @@
         }
       }
     }
+
+    @include md {
+      .about-content {
+        padding: 0 10em;
+      }
+    }
+  }
+}
+
+@include md {
+  #about {
+    padding-top: 4em;
   }
 }
