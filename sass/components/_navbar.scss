@@ -58,6 +58,13 @@ header {
                 transition: all 0.5s ease-in-out;
               }
             }
+
+            @include breakpoint(375px) {
+              a {
+                // padding: 0.2em;
+                font-size: 0.8rem;
+              }
+            }
           }
         }
       }
