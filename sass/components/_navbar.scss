@@ -153,17 +153,8 @@ header {
       input[type="checkbox"]:checked ~ nav {
         transform: translate(-50%, 90%);
         background-color: white;
-        // padding: 2em;
+        padding: 1.15em;
       }
-
-      // input[type="checkbox"]:checked ~ nav::after {
-      //   content: "";
-      //   position: absolute;
-      //   inset: 0;
-      //   width: 100vw;
-      //   height: 100vh;
-      //   background-color: black;
-      // }
     }
   }
 }

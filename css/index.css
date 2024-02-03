@@ -161,5 +161,6 @@ header .header-wrapper .hamburger-menu span:last-of-type {
   header .header-wrapper input[type=checkbox]:checked ~ nav {
     transform: translate(-50%, 90%);
     background-color: white;
+    padding: 1.15em;
   }
 }
