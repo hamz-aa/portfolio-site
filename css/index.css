@@ -47,6 +47,7 @@ header .header-wrapper .logo-wrapper {
   color: #1f2544;
   font-size: 1.3rem;
   font-weight: 500;
+  cursor: default;
 }
 header .header-wrapper .logo-wrapper img {
   width: 60px;
@@ -190,10 +191,12 @@ header .header-wrapper .hamburger-menu span:last-of-type {
 #home .home-wrapper .home-content h1 {
   font-size: 3.6rem;
   align-self: flex-start;
+  cursor: default;
 }
 #home .home-wrapper .home-content h3 {
   font-size: 2.2rem;
   align-self: center;
+  cursor: default;
 }
 #home .home-wrapper .home-content .home-btns {
   margin-top: 1em;
@@ -305,4 +308,72 @@ header .header-wrapper .hamburger-menu span:last-of-type {
   #home .home-wrapper .img-content img {
     width: 80%;
   }
+}
+
+#about {
+  padding-top: 6em;
+}
+#about .about-headings {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+#about .about-headings p {
+  font-size: 1.2rem;
+}
+#about .about-headings h3 {
+  font-size: 3.2rem;
+  cursor: default;
+}
+#about .about-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#about .about-wrapper .img-content {
+  flex: 1 1 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#about .about-wrapper .img-content img {
+  width: 65%;
+}
+#about .about-wrapper .about-content {
+  flex: 1 1 50%;
+  padding-right: 10em;
+}
+#about .about-wrapper .about-content .about-boxes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  gap: 10px;
+}
+#about .about-wrapper .about-content .about-boxes div {
+  border: 2px solid #1f2544;
+  border-radius: 10px;
+  margin-bottom: 1.5em;
+}
+#about .about-wrapper .about-content .about-boxes div i {
+  font-size: 1.8rem;
+  color: #1f2544;
+  margin-bottom: 0.3em;
+}
+#about .about-wrapper .about-content .about-boxes div h4 {
+  font-size: 1.4rem;
+  margin-bottom: 0.2em;
+  color: #1f2544;
+  cursor: default;
+}
+#about .about-wrapper .about-content .about-boxes div p {
+  color: #474f7a;
+}
+#about .about-wrapper .about-content .about-boxes .experience {
+  padding: 2em 2.5em;
+}
+#about .about-wrapper .about-content .about-boxes .education {
+  padding: 2em;
+}
+#about .about-wrapper .about-content .about-text p {
+  text-align: justify;
 }
