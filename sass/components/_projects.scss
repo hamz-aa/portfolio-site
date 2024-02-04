@@ -22,9 +22,18 @@
   }
 
   .projects-wrapper {
+    border: 2px solid;
+    overflow: hidden;
     display: flex;
     align-items: center;
     gap: 10px;
+
+    button {
+      outline: none;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
 
     .left-slider,
     .right-slider {
@@ -46,7 +55,8 @@
     & > div {
       position: relative;
       border: 2px solid $primary;
-      transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+      transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out,
+        translate 0.3s ease, scale 0.3s ease;
 
       img {
         display: block;
@@ -107,7 +117,7 @@
 
         &:hover {
           transition: transform 0.3s ease-in-out;
-          transform: scale(1.4);
+          transform: scale(1.5);
         }
       }
     }
@@ -129,13 +139,22 @@
       opacity: 0.8;
     }
 
-    &:has(div:hover) > a i {
+    &:has(div:hover) > button i {
       color: white;
-      transform: scale(1.5);
     }
 
-    &:has(> a:hover) > div:not(:hover) {
+    &:has(> button:hover) > div:not(:hover) {
       transform: scale(0.95);
     }
+
+    // a:hover + .left-slider {
+    //   transition: all 0.3s ease;
+    //   translate: -100%;
+    // }
+    // a:hover ~ .active-slider {
+    //   transition: all 0.3s ease;
+    //   translate: -50%;
+    //   scale: 0.5;
+    // }
   }
 }

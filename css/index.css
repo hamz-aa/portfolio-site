@@ -620,9 +620,17 @@ header .header-wrapper .hamburger-menu span:last-of-type {
   }
 }
 #projects .projects-wrapper {
+  border: 2px solid;
+  overflow: hidden;
   display: flex;
   align-items: center;
   gap: 10px;
+}
+#projects .projects-wrapper button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 #projects .projects-wrapper .left-slider,
 #projects .projects-wrapper .right-slider {
@@ -639,7 +647,7 @@ header .header-wrapper .hamburger-menu span:last-of-type {
 #projects .projects-wrapper > div {
   position: relative;
   border: 2px solid #1f2544;
-  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out, translate 0.3s ease, scale 0.3s ease;
 }
 #projects .projects-wrapper > div img {
   display: block;
@@ -692,7 +700,7 @@ header .header-wrapper .hamburger-menu span:last-of-type {
 }
 #projects .projects-wrapper .slider-arrow i:hover {
   transition: transform 0.3s ease-in-out;
-  transform: scale(1.4);
+  transform: scale(1.5);
 }
 #projects .projects-wrapper .arrow-left {
   left: 1%;
@@ -707,10 +715,9 @@ header .header-wrapper .hamburger-menu span:last-of-type {
   transform: scale(0.9);
   opacity: 0.8;
 }
-#projects .projects-wrapper:has(div:hover) > a i {
+#projects .projects-wrapper:has(div:hover) > button i {
   color: white;
-  transform: scale(1.5);
 }
-#projects .projects-wrapper:has(> a:hover) > div:not(:hover) {
+#projects .projects-wrapper:has(> button:hover) > div:not(:hover) {
   transform: scale(0.95);
 }

@@ -1,0 +1,17 @@
+.left-un-active {
+  translate: -100%;
+}
+
+.right-un-active {
+  translate: 100%;
+}
+
+.center-to-left {
+  translate: -50%;
+  scale: 0.5;
+}
+
+.center-to-right {
+  translate: 50%;
+  scale: 0.5;
+}
