@@ -50,9 +50,9 @@
       .about-boxes {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         text-align: center;
-        gap: 10px;
+        gap: 20px;
 
         div {
           border: 2px solid $primary;
@@ -180,11 +180,27 @@
           text-align: justify;
         }
       }
+
+      @include md {
+        .about-text {
+          width: 60%;
+          margin: auto;
+        }
+      }
+
+      @include sm {
+        .about-text {
+          width: 80%;
+          margin: auto;
+        }
+      }
     }
 
     @include md {
       .about-content {
-        padding: 0 10em;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
       }
     }
   }

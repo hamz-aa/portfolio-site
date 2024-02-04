@@ -25,6 +25,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
     gap: 30px;
 
     & > div {
@@ -69,7 +70,31 @@
               opacity: 0.9;
             }
           }
+
+          @include sm {
+            .skill {
+              p:first-child {
+                font-size: 1rem;
+              }
+
+              p:last-child {
+                font-size: 0.9rem;
+              }
+            }
+          }
         }
+      }
+    }
+
+    @include sm {
+      & > div {
+        padding: 2em 1.5em;
+      }
+    }
+
+    @include breakpoint(365px) {
+      & > div {
+        padding: 2em 0.5em;
       }
     }
 
@@ -80,6 +105,34 @@
     .cs-skills {
       margin-right: auto;
       align-self: flex-start;
+    }
+
+    @include breakpoint(895px) {
+      .mern-skills {
+        margin: auto;
+        width: 70%;
+      }
+
+      .cs-skills {
+        margin: auto;
+        width: 70%;
+      }
+    }
+
+    @include sm {
+      .mern-skills {
+        width: 80%;
+      }
+
+      .cs-skills {
+        width: 80%;
+      }
+    }
+  }
+
+  @include sm {
+    .skills-wrapper {
+      gap: 20px;
     }
   }
 }

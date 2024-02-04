@@ -365,9 +365,9 @@ header .header-wrapper .hamburger-menu span:last-of-type {
 #about .about-wrapper .about-content .about-boxes {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   text-align: center;
-  gap: 10px;
+  gap: 20px;
 }
 #about .about-wrapper .about-content .about-boxes div {
   border: 2px solid #1f2544;
@@ -463,8 +463,22 @@ header .header-wrapper .hamburger-menu span:last-of-type {
   text-align: justify;
 }
 @media (max-width: 720px) {
+  #about .about-wrapper .about-content .about-text {
+    width: 60%;
+    margin: auto;
+  }
+}
+@media (max-width: 480px) {
+  #about .about-wrapper .about-content .about-text {
+    width: 80%;
+    margin: auto;
+  }
+}
+@media (max-width: 720px) {
   #about .about-wrapper .about-content {
-    padding: 0 10em;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -496,6 +510,7 @@ header .header-wrapper .hamburger-menu span:last-of-type {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  flex-wrap: wrap;
   gap: 30px;
 }
 #skills .skills-wrapper > div {
@@ -536,10 +551,51 @@ header .header-wrapper .hamburger-menu span:last-of-type {
   color: #474f7a;
   opacity: 0.9;
 }
+@media (max-width: 480px) {
+  #skills .skills-wrapper > div .skills-list .skill-wrapper .skill p:first-child {
+    font-size: 1rem;
+  }
+  #skills .skills-wrapper > div .skills-list .skill-wrapper .skill p:last-child {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 480px) {
+  #skills .skills-wrapper > div {
+    padding: 2em 1.5em;
+  }
+}
+@media (max-width: 365px) {
+  #skills .skills-wrapper > div {
+    padding: 2em 0.5em;
+  }
+}
 #skills .skills-wrapper .mern-skills {
   margin-left: auto;
 }
 #skills .skills-wrapper .cs-skills {
   margin-right: auto;
   align-self: flex-start;
+}
+@media (max-width: 895px) {
+  #skills .skills-wrapper .mern-skills {
+    margin: auto;
+    width: 70%;
+  }
+  #skills .skills-wrapper .cs-skills {
+    margin: auto;
+    width: 70%;
+  }
+}
+@media (max-width: 480px) {
+  #skills .skills-wrapper .mern-skills {
+    width: 80%;
+  }
+  #skills .skills-wrapper .cs-skills {
+    width: 80%;
+  }
+}
+@media (max-width: 480px) {
+  #skills .skills-wrapper {
+    gap: 20px;
+  }
 }
