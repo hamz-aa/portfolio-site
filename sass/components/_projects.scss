@@ -29,10 +29,12 @@
     .left-slider,
     .right-slider {
       flex: 1 1 25%;
+      z-index: 1;
     }
 
     .active-slider {
       flex: 1 1 50%;
+      z-index: 2;
 
       .img-content {
         a {
@@ -44,6 +46,7 @@
     & > div {
       position: relative;
       border: 2px solid $primary;
+      transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
 
       img {
         display: block;
@@ -92,6 +95,47 @@
 
     & > div:hover .img-content {
       opacity: 1;
+    }
+
+    .slider-arrow {
+      position: absolute;
+      z-index: 2;
+
+      i {
+        font-size: 1.6rem;
+        color: $primary;
+
+        &:hover {
+          transition: transform 0.3s ease-in-out;
+          transform: scale(1.4);
+        }
+      }
+    }
+
+    .arrow-left {
+      left: 1%;
+    }
+
+    .arrow-right {
+      right: 1%;
+    }
+
+    &:has(div:hover) > div {
+      transform: scale(1.1);
+    }
+
+    &:has(div:hover) > div:not(:hover) {
+      transform: scale(0.9);
+      opacity: 0.8;
+    }
+
+    &:has(div:hover) > a i {
+      color: white;
+      transform: scale(1.5);
+    }
+
+    &:has(> a:hover) > div:not(:hover) {
+      transform: scale(0.95);
     }
   }
 }

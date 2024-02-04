@@ -627,9 +627,11 @@ header .header-wrapper .hamburger-menu span:last-of-type {
 #projects .projects-wrapper .left-slider,
 #projects .projects-wrapper .right-slider {
   flex: 1 1 25%;
+  z-index: 1;
 }
 #projects .projects-wrapper .active-slider {
   flex: 1 1 50%;
+  z-index: 2;
 }
 #projects .projects-wrapper .active-slider .img-content a {
   padding: 0.6em 1.2em;
@@ -637,6 +639,7 @@ header .header-wrapper .hamburger-menu span:last-of-type {
 #projects .projects-wrapper > div {
   position: relative;
   border: 2px solid #1f2544;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
 #projects .projects-wrapper > div img {
   display: block;
@@ -678,4 +681,36 @@ header .header-wrapper .hamburger-menu span:last-of-type {
 }
 #projects .projects-wrapper > div:hover .img-content {
   opacity: 1;
+}
+#projects .projects-wrapper .slider-arrow {
+  position: absolute;
+  z-index: 2;
+}
+#projects .projects-wrapper .slider-arrow i {
+  font-size: 1.6rem;
+  color: #1f2544;
+}
+#projects .projects-wrapper .slider-arrow i:hover {
+  transition: transform 0.3s ease-in-out;
+  transform: scale(1.4);
+}
+#projects .projects-wrapper .arrow-left {
+  left: 1%;
+}
+#projects .projects-wrapper .arrow-right {
+  right: 1%;
+}
+#projects .projects-wrapper:has(div:hover) > div {
+  transform: scale(1.1);
+}
+#projects .projects-wrapper:has(div:hover) > div:not(:hover) {
+  transform: scale(0.9);
+  opacity: 0.8;
+}
+#projects .projects-wrapper:has(div:hover) > a i {
+  color: white;
+  transform: scale(1.5);
+}
+#projects .projects-wrapper:has(> a:hover) > div:not(:hover) {
+  transform: scale(0.95);
 }
