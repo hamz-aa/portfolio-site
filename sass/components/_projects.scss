@@ -1,0 +1,97 @@
+#projects {
+  padding-top: 6em;
+
+  .projects-headings {
+    text-align: center;
+    margin-bottom: 1.5em;
+
+    p {
+      font-size: 1.2rem;
+    }
+
+    h3 {
+      font-size: 3.2rem;
+      cursor: default;
+    }
+
+    @include sm {
+      h3 {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .projects-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .left-slider,
+    .right-slider {
+      flex: 1 1 25%;
+    }
+
+    .active-slider {
+      flex: 1 1 50%;
+
+      .img-content {
+        a {
+          padding: 0.6em 1.2em;
+        }
+      }
+    }
+
+    & > div {
+      position: relative;
+      border: 2px solid $primary;
+
+      img {
+        display: block;
+      }
+
+      .img-content {
+        position: absolute;
+        display: flex;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        opacity: 0;
+
+        a {
+          margin-inline: 0.2em;
+          padding: 0.3em 0.6em;
+          border-radius: 20px;
+          display: inline-block;
+          background-color: $error;
+          color: whitesmoke;
+          transition: background-color 0.3s ease-in-out;
+
+          &:hover {
+            background-color: $primary;
+            color: white;
+          }
+        }
+      }
+    }
+
+    & > div::after {
+      content: "";
+      display: block;
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      transition: opacity 0.3s ease-in-out;
+      background-color: rgba(0, 0, 0, 0.623);
+      opacity: 0;
+    }
+
+    & > div:hover::after {
+      opacity: 1;
+    }
+
+    & > div:hover .img-content {
+      opacity: 1;
+    }
+  }
+}
