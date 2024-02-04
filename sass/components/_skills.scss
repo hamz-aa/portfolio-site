@@ -1,0 +1,85 @@
+#skills {
+  padding-top: 6em;
+
+  .skills-headings {
+    text-align: center;
+    margin-bottom: 1.5em;
+
+    p {
+      font-size: 1.2rem;
+    }
+
+    h3 {
+      font-size: 3.2rem;
+      cursor: default;
+    }
+
+    @include sm {
+      h3 {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .skills-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+
+    & > div {
+      border: 2px solid rgba(31, 37, 68, 0.3);
+      border-radius: 20px;
+      padding: 2em 3em;
+
+      h3 {
+        color: $primary;
+        text-align: center;
+        font-size: 1.4rem;
+        cursor: default;
+        margin-bottom: 1em;
+      }
+
+      .skills-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+
+        .skill-wrapper {
+          display: flex;
+          gap: 10px;
+
+          i {
+            font-size: 1.5rem;
+            color: $primary;
+          }
+
+          .skill {
+            align-self: flex-start;
+
+            p:first-child {
+              font-weight: 500;
+              color: $primary;
+              font-size: 1.2rem;
+              margin-bottom: 0.3em;
+            }
+
+            p:last-child {
+              color: $secondary;
+              opacity: 0.9;
+            }
+          }
+        }
+      }
+    }
+
+    .mern-skills {
+      margin-left: auto;
+    }
+
+    .cs-skills {
+      margin-right: auto;
+      align-self: flex-start;
+    }
+  }
+}

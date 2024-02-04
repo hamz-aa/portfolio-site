@@ -473,3 +473,73 @@ header .header-wrapper .hamburger-menu span:last-of-type {
     padding-top: 4em;
   }
 }
+#skills {
+  padding-top: 6em;
+}
+#skills .skills-headings {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+#skills .skills-headings p {
+  font-size: 1.2rem;
+}
+#skills .skills-headings h3 {
+  font-size: 3.2rem;
+  cursor: default;
+}
+@media (max-width: 480px) {
+  #skills .skills-headings h3 {
+    font-size: 3rem;
+  }
+}
+#skills .skills-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 30px;
+}
+#skills .skills-wrapper > div {
+  border: 2px solid rgba(31, 37, 68, 0.3);
+  border-radius: 20px;
+  padding: 2em 3em;
+}
+#skills .skills-wrapper > div h3 {
+  color: #1f2544;
+  text-align: center;
+  font-size: 1.4rem;
+  cursor: default;
+  margin-bottom: 1em;
+}
+#skills .skills-wrapper > div .skills-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+#skills .skills-wrapper > div .skills-list .skill-wrapper {
+  display: flex;
+  gap: 10px;
+}
+#skills .skills-wrapper > div .skills-list .skill-wrapper i {
+  font-size: 1.5rem;
+  color: #1f2544;
+}
+#skills .skills-wrapper > div .skills-list .skill-wrapper .skill {
+  align-self: flex-start;
+}
+#skills .skills-wrapper > div .skills-list .skill-wrapper .skill p:first-child {
+  font-weight: 500;
+  color: #1f2544;
+  font-size: 1.2rem;
+  margin-bottom: 0.3em;
+}
+#skills .skills-wrapper > div .skills-list .skill-wrapper .skill p:last-child {
+  color: #474f7a;
+  opacity: 0.9;
+}
+#skills .skills-wrapper .mern-skills {
+  margin-left: auto;
+}
+#skills .skills-wrapper .cs-skills {
+  margin-right: auto;
+  align-self: flex-start;
+}
