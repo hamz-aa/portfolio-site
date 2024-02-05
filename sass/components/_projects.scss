@@ -23,7 +23,6 @@
 
   .projects-wrapper {
     position: relative;
-    border: 2px solid;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -117,8 +116,8 @@
         color: $primary;
 
         &:hover {
-          transition: transform 0.3s ease-in-out;
-          transform: scale(1.5);
+          transition: scale 0.3s ease-in-out;
+          scale: 1.5;
         }
       }
     }
@@ -132,11 +131,11 @@
     }
 
     &:has(div:hover) > div {
-      transform: scale(1.1);
+      scale: 1.1;
     }
 
     &:has(div:hover) > div:not(:hover) {
-      transform: scale(0.9);
+      scale: 0.9;
       opacity: 0.8;
     }
 
@@ -145,7 +144,7 @@
     }
 
     &:has(> button:hover) > div:not(:hover) {
-      transform: scale(0.95);
+      scale: 0.95;
     }
   }
 }

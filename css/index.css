@@ -621,7 +621,6 @@ header .header-wrapper .hamburger-menu span:last-of-type {
 }
 #projects .projects-wrapper {
   position: relative;
-  border: 2px solid;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -700,8 +699,8 @@ header .header-wrapper .hamburger-menu span:last-of-type {
   color: #1f2544;
 }
 #projects .projects-wrapper .slider-arrow i:hover {
-  transition: transform 0.3s ease-in-out;
-  transform: scale(1.5);
+  transition: scale 0.3s ease-in-out;
+  scale: 1.5;
 }
 #projects .projects-wrapper .arrow-left {
   left: 1%;
@@ -710,15 +709,15 @@ header .header-wrapper .hamburger-menu span:last-of-type {
   right: 1%;
 }
 #projects .projects-wrapper:has(div:hover) > div {
-  transform: scale(1.1);
+  scale: 1.1;
 }
 #projects .projects-wrapper:has(div:hover) > div:not(:hover) {
-  transform: scale(0.9);
+  scale: 0.9;
   opacity: 0.8;
 }
 #projects .projects-wrapper:has(div:hover) > button i {
   color: white;
 }
 #projects .projects-wrapper:has(> button:hover) > div:not(:hover) {
-  transform: scale(0.95);
+  scale: 0.95;
 }

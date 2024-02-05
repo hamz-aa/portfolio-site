@@ -20,20 +20,20 @@ leftArrow.addEventListener("click", () => {
   leftSlider.style.translate = "-150%";
   leftSlider.classList.replace("left-slider", "left-next");
 
-  activeSlider.classList.add("center-to-left");
+  activeSlider.style.scale = "0.5";
   setTimeout(() => {
-    activeSlider.classList.remove("center-to-left");
+    activeSlider.removeAttribute("style");
     activeSlider.classList.replace("active-slider", "left-slider");
   }, 300);
 
-  rightSlider.style.translate = "-10%";
+  rightSlider.style.translate = "-25%";
   setTimeout(() => {
     rightSlider.classList.replace("right-slider", "active-slider");
     rightSlider.style.translate = "0";
   }, 300);
 
   right.style.position = "relative";
-  right.style.transform = "translateX(0)";
+  right.style.translate = "0";
   setTimeout(() => {
     right.classList.replace("right-next", "right-slider");
 
@@ -59,10 +59,13 @@ function adjustLeft() {
 
   if (left.classList.contains("right-slider"))
     left.classList.remove("right-slider");
+  if (left.classList.contains("right-next"))
+    left.classList.remove("right-next");
   if (!left.classList.contains("left-next")) left.classList.add("left-next");
   left.style.display = "block";
   left.style.position = "absolute";
-  left.style.transform = "translateX(-150%)";
+  left.style.translate = "none";
+  left.style.translate = "-150%";
 }
 
 function adjustRight() {
@@ -74,9 +77,12 @@ function adjustRight() {
 
   if (right.classList.contains("left-slider"))
     left.classList.remove("left-slider");
+  if (right.classList.contains("left-next"))
+    right.classList.remove("left-next");
   if (!right.classList.contains("right-next"))
     right.classList.add("right-next");
   right.style.display = "block";
   right.style.position = "absolute";
-  right.style.transform = "translateX(150%)";
+  right.style.translate = "none";
+  right.style.translate = "150%";
 }
