@@ -620,6 +620,7 @@ header .header-wrapper .hamburger-menu span:last-of-type {
   }
 }
 #projects .projects-wrapper {
+  position: relative;
   border: 2px solid;
   overflow: hidden;
   display: flex;

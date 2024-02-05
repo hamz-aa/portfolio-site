@@ -22,6 +22,7 @@
   }
 
   .projects-wrapper {
+    position: relative;
     border: 2px solid;
     overflow: hidden;
     display: flex;
@@ -146,15 +147,5 @@
     &:has(> button:hover) > div:not(:hover) {
       transform: scale(0.95);
     }
-
-    // a:hover + .left-slider {
-    //   transition: all 0.3s ease;
-    //   translate: -100%;
-    // }
-    // a:hover ~ .active-slider {
-    //   transition: all 0.3s ease;
-    //   translate: -50%;
-    //   scale: 0.5;
-    // }
   }
 }
