@@ -644,6 +644,27 @@ header .header-wrapper .hamburger-menu span:last-of-type {
 #projects .projects-wrapper .active-slider .img-content a {
   padding: 0.6em 1.2em;
 }
+@media (max-width: 860px) {
+  #projects .projects-wrapper .left-slider {
+    margin-left: 25px;
+  }
+  #projects .projects-wrapper .right-slider {
+    margin-right: 25px;
+  }
+}
+@media (max-width: 720px) {
+  #projects .projects-wrapper .left-slider,
+  #projects .projects-wrapper .right-slider {
+    flex: 0;
+    margin: unset;
+    visibility: hidden;
+  }
+  #projects .projects-wrapper .active-slider {
+    max-width: 85%;
+    margin: auto;
+    visibility: visible;
+  }
+}
 #projects .projects-wrapper > div {
   position: relative;
   border: 2px solid #1f2544;
@@ -692,7 +713,7 @@ header .header-wrapper .hamburger-menu span:last-of-type {
 }
 #projects .projects-wrapper .slider-arrow {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
 }
 #projects .projects-wrapper .slider-arrow i {
   font-size: 1.6rem;
@@ -707,6 +728,14 @@ header .header-wrapper .hamburger-menu span:last-of-type {
 }
 #projects .projects-wrapper .arrow-right {
   right: 1%;
+}
+@media (max-width: 720px) {
+  #projects .projects-wrapper .arrow-left {
+    left: 3%;
+  }
+  #projects .projects-wrapper .arrow-right {
+    right: 3%;
+  }
 }
 #projects .projects-wrapper:has(div:hover) > div {
   scale: 1.1;

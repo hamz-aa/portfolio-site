@@ -52,6 +52,33 @@
       }
     }
 
+    @include breakpoint(860px) {
+      .left-slider {
+        margin-left: 25px;
+      }
+
+      .right-slider {
+        margin-right: 25px;
+      }
+    }
+
+    @include md {
+      .left-slider,
+      .right-slider {
+        flex: 0;
+        margin: unset;
+        // opacity: 0;
+        visibility: hidden;
+      }
+
+      .active-slider {
+        max-width: 85%;
+        margin: auto;
+        // opacity: 1;
+        visibility: visible;
+      }
+    }
+
     & > div {
       position: relative;
       border: 2px solid $primary;
@@ -109,7 +136,7 @@
 
     .slider-arrow {
       position: absolute;
-      z-index: 2;
+      z-index: 3;
 
       i {
         font-size: 1.6rem;
@@ -128,6 +155,16 @@
 
     .arrow-right {
       right: 1%;
+    }
+
+    @include md {
+      .arrow-left {
+        left: 3%;
+      }
+
+      .arrow-right {
+        right: 3%;
+      }
     }
 
     &:has(div:hover) > div {
