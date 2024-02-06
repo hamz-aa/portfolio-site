@@ -50,6 +50,41 @@ leftArrow.addEventListener("click", () => {
   }, 300);
 });
 
+rightArrow.addEventListener("click", () => {
+  rightSlider.style.position = "absolute";
+  rightSlider.style.translate = "150%";
+  rightSlider.classList.replace("right-slider", "right-next");
+
+  activeSlider.style.scale = "0.5";
+  setTimeout(() => {
+    activeSlider.removeAttribute("style");
+    activeSlider.classList.replace("active-slider", "right-slider");
+  }, 300);
+
+  leftSlider.style.translate = "25%";
+  setTimeout(() => {
+    leftSlider.classList.replace("left-slider", "active-slider");
+    leftSlider.style.translate = "0";
+  }, 300);
+
+  left.style.position = "relative";
+  left.style.translate = "0";
+  setTimeout(() => {
+    left.classList.replace("left-next", "left-slider");
+
+    leftSlider = document.querySelector(".left-slider");
+    rightSlider = document.querySelector(".right-slider");
+    activeSlider = document.querySelector(".active-slider");
+
+    right.style.display = "none";
+    right = rightSlider.nextElementSibling;
+    adjustRight();
+
+    left = leftSlider.previousElementSibling;
+    adjustLeft();
+  }, 300);
+});
+
 function adjustLeft() {
   if (left.nodeName === "BUTTON") {
     const lastElement = projects.lastElementChild.previousElementSibling;
