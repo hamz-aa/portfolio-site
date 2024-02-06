@@ -1,0 +1,64 @@
+#contact {
+  padding-top: 6em;
+
+  .contact-headings {
+    text-align: center;
+    margin-bottom: 1.5em;
+
+    p {
+      font-size: 1.2rem;
+    }
+
+    h3 {
+      font-size: 3.2rem;
+      cursor: default;
+    }
+
+    @include sm {
+      h3 {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .contact-wrapper {
+    border: 2px solid rgba(31, 37, 68, 0.3);
+    width: fit-content;
+    margin: auto;
+    padding: 2em 3em;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+
+    i {
+      font-size: 1.8rem;
+      color: $primary;
+    }
+
+    a {
+      color: $primary;
+      transition: color 0.2s ease-in-out;
+      font-size: 1.15rem;
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+
+    & > div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+  @include breakpoint(550px) {
+    .contact-wrapper {
+      max-width: 80%;
+      padding: 2em 1.5em;
+      justify-content: center;
+    }
+  }
+}

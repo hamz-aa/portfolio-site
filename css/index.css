@@ -171,11 +171,6 @@ header .header-wrapper .hamburger-menu span:last-of-type {
   }
 }
 
-@media (max-width: 480px) {
-  header {
-    position: static;
-  }
-}
 #home {
   padding-top: 8em;
 }
@@ -370,7 +365,7 @@ header .header-wrapper .hamburger-menu span:last-of-type {
   gap: 20px;
 }
 #about .about-wrapper .about-content .about-boxes div {
-  border: 2px solid #1f2544;
+  border: 2px solid rgba(31, 37, 68, 0.3);
   border-radius: 10px;
   margin-bottom: 1.5em;
 }
@@ -749,4 +744,67 @@ header .header-wrapper .hamburger-menu span:last-of-type {
 }
 #projects .projects-wrapper:has(> button:hover) > div:not(:hover) {
   scale: 0.95;
+}
+
+#contact {
+  padding-top: 6em;
+}
+#contact .contact-headings {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+#contact .contact-headings p {
+  font-size: 1.2rem;
+}
+#contact .contact-headings h3 {
+  font-size: 3.2rem;
+  cursor: default;
+}
+@media (max-width: 480px) {
+  #contact .contact-headings h3 {
+    font-size: 3rem;
+  }
+}
+#contact .contact-wrapper {
+  border: 2px solid rgba(31, 37, 68, 0.3);
+  width: fit-content;
+  margin: auto;
+  padding: 2em 3em;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+#contact .contact-wrapper i {
+  font-size: 1.8rem;
+  color: #1f2544;
+}
+#contact .contact-wrapper a {
+  color: #1f2544;
+  transition: color 0.2s ease-in-out;
+  font-size: 1.15rem;
+}
+#contact .contact-wrapper a:hover {
+  color: #474f7a;
+}
+#contact .contact-wrapper > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+@media (max-width: 550px) {
+  #contact .contact-wrapper {
+    max-width: 80%;
+    padding: 2em 1.5em;
+    justify-content: center;
+  }
+}
+
+#footer {
+  margin-top: 2.5em;
+  padding: 1.5em;
+  background-color: #1f2544;
+  color: white;
+  text-align: center;
 }

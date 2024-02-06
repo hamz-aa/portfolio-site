@@ -67,14 +67,12 @@
       .right-slider {
         flex: 0;
         margin: unset;
-        // opacity: 0;
         visibility: hidden;
       }
 
       .active-slider {
         max-width: 85%;
         margin: auto;
-        // opacity: 1;
         visibility: visible;
       }
     }
