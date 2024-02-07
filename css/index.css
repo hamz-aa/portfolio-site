@@ -310,11 +310,6 @@ header .header-wrapper .hamburger-menu span:last-of-type {
   }
 }
 
-@media (max-width: 480px) {
-  #home {
-    padding-top: 1.5em;
-  }
-}
 #about {
   padding-top: 6em;
 }
