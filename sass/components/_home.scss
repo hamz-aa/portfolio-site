@@ -67,6 +67,11 @@
           margin-inline: 0.3em;
           font-size: 1.8rem;
           color: $primary;
+          transition: color 0.3s ease-in-out;
+
+          &:hover {
+            color: $secondary;
+          }
         }
       }
 

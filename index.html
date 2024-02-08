@@ -21,7 +21,7 @@
           <img src="./img/hamza_logo.png" alt="logo" />
           <p class="name">Hamza Ahmed</p>
         </div>
-        <input type="checkbox" name="" id="" />
+        <input type="checkbox" name="" id="" onclick="menuHandler()" />
         <nav>
           <ul>
             <li><a href="#home">Home</a></li>
@@ -298,7 +298,7 @@
         <div class="contact-wrapper">
           <div class="email">
             <i class="fa-solid fa-envelope"></i>
-            <a href="mailto:jhamzaahmed@gmail.com" target="_blank">jhamzaahmed@gmail.com</a>
+            <a href="mailto:jhamzaahmed@gmail.com">jhamzaahmed@gmail.com</a>
           </div>
           <div class="linkedin">
             <i class="fa-brands fa-linkedin"></i>
@@ -313,5 +313,34 @@
         <p>Copyright &copy; 2024 Hamza Ahmed. All Rights Reserved.</p>
       </div>
     </footer>
+
+    <!-- smooth scroll behaviour using jQuery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
   </body>
 </html>

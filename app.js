@@ -121,3 +121,15 @@ function adjustRight() {
   right.style.translate = "none";
   right.style.translate = "150%";
 }
+
+// navbar.scss
+// menu handler for hamburger menu
+
+function menuHandler() {
+  const checkbox = document.querySelector('input[type=checkbox')
+  if(checkbox.checked){
+    document.body.style.backgroundColor = 'rgba(255,255,255,0.5)';
+  } else {
+    document.body.style.backgroundColor = 'unset';
+  }
+}
