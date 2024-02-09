@@ -122,7 +122,7 @@ function adjustRight() {
   right.style.translate = "150%";
 }
 
-// navbar.scss
+// navbar
 // menu handler for hamburger menu
 
 const menu = document.querySelectorAll("nav ul li a");
@@ -132,10 +132,20 @@ menu.forEach(btn => {
     const checkbox = document.querySelector('input[type=checkbox]');
     if(checkbox.checked){
       checkbox.checked = false;
+    document.body.style.overflow = 'auto';
     }
   })
 })
 
+const checkbox = document.querySelector('input[type=checkbox]');
+
+checkbox.addEventListener('click', () => {
+  if(checkbox.checked) {
+    document.body.style.overflow = 'hidden';
+  }
+})
+
+// navbar
 // name hacker effect
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -163,3 +173,13 @@ const hackerEffect = event => {
 }
 
 siteName.onmouseover = () => hackerEffect(event);
+
+// home section
+// typewriter effect 
+
+let typed = new Typed(".text-1", {
+  strings: ['MERN Stack Developer', 'Computer Scientist'],
+  typeSpeed: 90,
+  backSpeed: 90,
+  loop: true
+})

@@ -160,10 +160,18 @@ header {
       }
 
       input[type="checkbox"]:checked ~ nav {
-        transform: translate(-50%, 60%);
+        transform: translate(-50%, 55%);
         transition: background-color 0.2s ease-in-out;
         background-color: rgba(237, 231, 231, 0.596);
         opacity: 1;
+        
+        @include breakpoint(380px) {
+          transform: translate(-50%, 60%);
+        }
+
+        @include breakpoint(360px) {
+          transform: translate(-50%, 57%);
+        }
       }
       
       nav {
