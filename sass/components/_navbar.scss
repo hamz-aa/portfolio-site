@@ -75,6 +75,7 @@ header {
         left: 50%;
         transform: translate(-50%, -100%);
         transition: transform 0.5s ease-in-out;
+        opacity: 0;
 
         ul {
           flex-direction: column;
@@ -160,7 +161,9 @@ header {
 
       input[type="checkbox"]:checked ~ nav {
         transform: translate(-50%, 60%);
+        transition: background-color 0.2s ease-in-out;
         background-color: rgba(237, 231, 231, 0.596);
+        opacity: 1;
       }
       
       nav {
@@ -171,7 +174,7 @@ header {
         
         ul {
           background-color: white;
-          padding: 1.15em;
+          padding: 3em;
           width: fit-content;
           margin: auto;
           border: 2px solid $primary;
