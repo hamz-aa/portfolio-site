@@ -31,10 +31,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
-
-      img {
-        width: 65%;
-      }
+      
+        img {
+          width: 100%;
+        }
     }
 
     @include md {
@@ -46,6 +46,16 @@
     .about-content {
       flex: 1 1 50%;
       padding-right: 10em;
+
+      @include breakpoint(1050px) {
+        padding-right: 7em;
+      }
+      @include breakpoint(1025px) {
+        padding-right: 5em;
+      }
+      @include breakpoint(820px) {
+        padding-right: 3em;
+      }
 
       .about-boxes {
         display: flex;

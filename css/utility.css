@@ -19,10 +19,11 @@
 }
 
 /* border animation css */
+
+/* home profile img animation */
 .border-animation .img {
   width: 400px;
   height: 360px;
-  /* margin: 100px 0 0 170px; */
   border: 5px solid #1f2544;
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   background: #e4e6e5 url('../img/profile-img-2.png') no-repeat;
@@ -60,5 +61,48 @@
   .border-animation .img {
     width: 250px;
     height: 250px;
+  }
+}
+
+/* about img animation */
+.border {
+  width: 65%;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 350px;
+  /* width: 400px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #bbbdc7;
+}
+
+.border::before {
+  content: '';
+  position: absolute;
+  background-color:  #1f2544;
+  animation: animate 4s linear infinite;
+  height: 300%;
+  width: 120px;
+}
+
+.border::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  background: url('../img/profile.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 16px;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);;
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

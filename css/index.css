@@ -383,7 +383,7 @@ header .header-wrapper .hamburger-menu span:last-of-type {
   justify-content: center;
 }
 #about .about-wrapper .img-content img {
-  width: 65%;
+  width: 100%;
 }
 @media (max-width: 720px) {
   #about .about-wrapper .img-content {
@@ -393,6 +393,21 @@ header .header-wrapper .hamburger-menu span:last-of-type {
 #about .about-wrapper .about-content {
   flex: 1 1 50%;
   padding-right: 10em;
+}
+@media (max-width: 1050px) {
+  #about .about-wrapper .about-content {
+    padding-right: 7em;
+  }
+}
+@media (max-width: 1025px) {
+  #about .about-wrapper .about-content {
+    padding-right: 5em;
+  }
+}
+@media (max-width: 820px) {
+  #about .about-wrapper .about-content {
+    padding-right: 3em;
+  }
 }
 #about .about-wrapper .about-content .about-boxes {
   display: flex;
