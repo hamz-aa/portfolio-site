@@ -20,17 +20,17 @@
       <div class="container header-wrapper">
         <div class="logo-wrapper">
           <img src="./img/hamza_logo.png" alt="logo" />
-          <p data-value="Hamza Ahmed" class="name">Hamza Ahmed</p>
+          <p data-value="Hamza Ahmed" class="name gsap-ani-link">Hamza Ahmed</p>
         </div>
         <input type="checkbox" name="" id=""/>
         <nav>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li id="cv"><a href="./utils/CV.pdf" download="Hamza Ahmed CV">Download CV</a></li>
+            <li class="gsap-ani-link"><a href="#home">Home</a></li>
+            <li class="gsap-ani-link"><a href="#about">About</a></li>
+            <li class="gsap-ani-link"><a href="#skills">Skills</a></li>
+            <li class="gsap-ani-link"><a href="#projects">Projects</a></li>
+            <li class="gsap-ani-link"><a href="#contact">Contact</a></li>
+            <li id="cv" class="gsap-ani-link"><a href="./utils/CV.pdf" download="Hamza Ahmed CV">Download CV</a></li>
           </ul>
         </nav>
         <div class="hamburger-menu">
@@ -42,7 +42,7 @@
     <!-- home section -->
     <section id="home">
       <div class="home-wrapper container">
-        <div class="home-content">
+        <div class="home-content gsap-ani-block">
           <h1>Hamza Ahmed</h1>
           <div class="typewriter-wrapper">
             <h3 class="typewriter-text text-1"></h3>
@@ -58,7 +58,7 @@
             <a href="https://github.com/hamz-aa" target="_blank" class="github"><i class="fa-brands fa-github"></i></a>
           </div>
         </div>
-        <div class="img-content border-animation">
+        <div class="img-content border-animation gsap-ani-block">
           <!-- <img src="./img/profile.jpg" alt="Profile Image" /> -->
           <div class="img"></div>
         </div>
@@ -348,5 +348,6 @@ $(document).ready(function(){
   });
 });
 </script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </body>
 </html>

@@ -107,14 +107,14 @@
 }
 
 /* scroll animation */
-section {
+section:not(:first-of-type) {
   opacity: 0;
   filter: blur(5px);
-  transform: translateY(20%);
+  transform: translateY(10%);
   transition: all 1s;
 }
 
-.show {
+section.show {
   filter: blur(0);
   transform: translateY(0);
   opacity: 1;

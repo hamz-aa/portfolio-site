@@ -192,13 +192,30 @@ let typed = new Typed(".text-1", {
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if(entry.isIntersecting) {
-      entry.target.classList.add('show');
-    } else {
-      entry.target.classList.remove('show');
-    }
+      entry.target.classList.toggle('show', entry.isIntersecting);
   })
+}, {
+  threshold: 0.2,
+  rootMargin: '-50px'
 })
 
-const sections = document.querySelectorAll('section');
+const sections = document.querySelectorAll('section:not(:first-of-type)');
 sections.forEach(el => observer.observe(el));
+
+// gsap animations
+
+gsap.from(".gsap-ani-link", {
+  stagger: 0.2,
+  y: 10,
+  duration: 1,
+  ease: Power2,
+  opacity: 0,
+}) 
+
+gsap.from(".gsap-ani-block", {
+  y: 50,
+  stagger: 0.3,
+  opacity: 0,
+  ease: Expo,
+  duration: 1,
+});
