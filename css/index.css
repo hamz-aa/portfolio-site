@@ -220,10 +220,20 @@ header .header-wrapper .hamburger-menu span:last-of-type {
   align-self: flex-start;
   cursor: default;
 }
+@media (max-width: 1040px) {
+  #home .home-wrapper .home-content h1 {
+    font-size: 3rem;
+  }
+}
 #home .home-wrapper .home-content h3 {
   font-size: 2.2rem;
   align-self: center;
   cursor: default;
+}
+@media (max-width: 1040px) {
+  #home .home-wrapper .home-content h3 {
+    font-size: 2rem;
+  }
 }
 #home .home-wrapper .home-content .home-btns {
   margin-top: 1em;

@@ -17,3 +17,48 @@
 .text-1 {
   display: inline-block;
 }
+
+/* border animation css */
+.border-animation .img {
+  width: 400px;
+  height: 360px;
+  /* margin: 100px 0 0 170px; */
+  border: 5px solid #1f2544;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  background: #e4e6e5 url('../img/profile-img-2.png') no-repeat;
+  background-size: cover;
+  background-position: bottom -110px center;
+  animation: morph 8s ease-in-out infinite 1s;
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+  border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  } 
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+@media(max-width: 1130px) {
+  .border-animation .img {
+    width: 32vw;
+    height: 30vw;
+  }
+}
+
+@media(max-width: 850px) {
+  .border-animation .img {
+  background-position: bottom -70px center;
+  }
+}
+
+@media(max-width: 720px) {
+  .border-animation .img {
+    width: 250px;
+    height: 250px;
+  }
+}

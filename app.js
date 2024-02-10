@@ -143,6 +143,9 @@ checkbox.addEventListener('click', () => {
   if(checkbox.checked) {
     document.body.style.overflow = 'hidden';
   }
+  if(!checkbox.checked) {
+    document.body.style.overflow = 'auto';
+  }
 })
 
 // navbar
