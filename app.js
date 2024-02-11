@@ -155,20 +155,20 @@ checkbox.addEventListener('click', () => {
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const siteName = document.querySelector('.name');
 
-const hackerEffect = event => {
+const hackerEffect = () => {
   let iterations = 0
 
   const interval = setInterval(() => {
-    event.target.innerText = event.target.innerText.split("")
+    siteName.innerText = siteName.innerText.split("")
       .map((letter, index) => {
         if(index < iterations) {
-          return event.target.dataset.value[index];
+          return siteName.dataset.value[index];
         }
         return letters[Math.floor(Math.random() * 26)]
       })
       .join("");
 
-      if(iterations >= event.target.dataset.value.length){
+      if(iterations >= siteName.dataset.value.length){
         clearInterval(interval);
       }
 
@@ -176,7 +176,9 @@ const hackerEffect = event => {
   }, 30)
 }
 
-siteName.onmouseover = () => hackerEffect(event);
+hackerEffect();
+siteName.addEventListener('mouseover', hackerEffect);
+siteName.addEventListener('touchstart ', hackerEffect);
 
 // home section
 // typewriter effect 

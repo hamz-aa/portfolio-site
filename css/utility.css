@@ -18,8 +18,62 @@
   display: inline-block;
 }
 
-/* border animation css */
+/* cursor css for typed.js */
+.typed-cursor{
+  font-size: 2.2rem;
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
 
+@keyframes blink{
+  10% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+  10% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes blink{
+  10% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+
+@media (max-width: 1040px) {
+  .typed-cursor {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .typed-cursor {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .typed-cursor {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 530px) {
+  .typed-cursor {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 355px) {
+  .typed-cursor {
+    font-size: 1.2rem;
+  }
+}
+
+/* border animation css */
 /* home profile img animation */
 .border-animation .img {
   width: 400px;
