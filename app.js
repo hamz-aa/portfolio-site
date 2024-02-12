@@ -16,7 +16,7 @@ let right = rightSlider.nextElementSibling;
 adjustLeft();
 adjustRight();
 
-leftArrow.addEventListener("click", () => {
+rightArrow.addEventListener("click", () => {
   leftSlider.style.position = "absolute";
   leftSlider.style.translate = "-150%";
   leftSlider.classList.replace("left-slider", "left-next");
@@ -51,7 +51,7 @@ leftArrow.addEventListener("click", () => {
   }, 300);
 });
 
-rightArrow.addEventListener("click", () => {
+leftArrow.addEventListener("click", () => {
   rightSlider.style.position = "absolute";
   rightSlider.style.translate = "150%";
   rightSlider.classList.replace("right-slider", "right-next");
